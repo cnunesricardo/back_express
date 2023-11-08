@@ -45,12 +45,22 @@ const updateProduct = (productId, updatedData) => {
             if(productIndex != -1){
                 const existingProduct = productsData[productIndex];
 
-                if(updatedData.title != undefined){
+                if(updatedData.title != ''){
                     existingProduct.title = updatedData.title;
                 } 
-                if(updatedData.price != undefined){
+                if(updatedData.description != ''){
+                    existingProduct.description = updatedData.description;
+                }
+                if(updatedData.category != ''){
+                    existingProduct.category = updatedData.category;
+                }
+                if(updatedData.price != ''){
                     existingProduct.price = updatedData.price;
                 }
+                if(updatedData.image != ''){
+                    existingProduct.image = updatedData.image;
+                }
+
 
                 productsData[productIndex] = existingProduct;
 

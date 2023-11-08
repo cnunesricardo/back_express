@@ -38,8 +38,13 @@ router.put('/:id', (req, res) => {
     const idRecebido = req.params.id;
     const updatedData = req.body;
 
+    console.log(req.body)
     console.log("Id recebido: " + idRecebido)
-    console.log("Informações recebidas: " + updatedData.title)
+    console.log("Title Recebido: " + updatedData.title)
+    console.log("Description Recebido: " + updatedData.description)
+    console.log("Categoty Recebido: " + updatedData.category)
+    console.log("Price Recebido: " + updatedData.price)
+
 
     productController.updateProduct(idRecebido, updatedData)
         .then(() =>{
